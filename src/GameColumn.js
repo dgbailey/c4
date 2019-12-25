@@ -14,10 +14,11 @@ export const GameColumn = (props) => {
     console.log('props',props)
     const addTile = () => {
         let newState = [props.state.move,...tileCount]
-        console.log(newState)
+        
         
         setCount([...newState]);
         dispatch({type:'move'});        
+        // setState is asynchronous function and just like any asynchronous function is being passed on to the event loop, setState also is passed on to the event loop and any code after it will execute seemlessly.
        
 
     }
@@ -44,8 +45,8 @@ const StyledGameColumn = styled.div `
     border:1px solid black;
     &:hover{
         cursor:pointer;
-        box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25);
-        transition:.5s;
+        ${'' /* box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25); */}
+        transition:.1s;
         background:lightgray;
        
     }
