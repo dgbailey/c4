@@ -1,24 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {GameBoard} from './GameBoard';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <GameBoard></GameBoard>
+      {/* //game board
+      //game column
+      //game square
+
+      //click on any square
+      //or 
+      //column click needs to be aware of last move meta data
+      //or just a boolean value column state that is adjusted per move */}
+
+
+      //winner condition extra
     </div>
   );
 }
